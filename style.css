@@ -13,7 +13,8 @@ html, body {
 :root {
     --banner-background-color: #D9D9DB;
     --banner-button-color: #4C4D4F;
-    --info-catalog-background-color: #D9D9DB;
+    --info-catalog-card-background-color: #D9D9DB;
+    --thumbnail-card-boarder-color: #CFCFD2;
     --courses-background-color: #F5F5F6;
     --header-color: #595A5C;
     --company-academy-color: #98989E;
@@ -90,7 +91,7 @@ main {
 #banner {
     position: relative;
     background-color: var(--banner-background-color);
-    padding: 2rem 1.5rem;
+    padding: 2rem 0rem 2rem 1.5rem;
 }
 
 #banner-content {
@@ -111,7 +112,7 @@ main {
     align-items: flex-start;
     color: var(--font-color);
     width: 30%;
-    padding: 10rem 0;
+    padding: 10rem 0 10rem 1rem;
 }
 
 #banner-info h1 {
@@ -132,3 +133,95 @@ main {
     margin-top: 2rem;
 }
 
+/* Information section*/
+#information {
+    position: relative;
+    display: flex;
+    background-color: white;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+#information-main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-right: 1.5rem;
+    width: 60%;
+    height: auto;
+    border-right: 1px solid var(--thumbnail-card-boarder-color);
+}
+
+#information-main h2 {
+    margin: 2rem 0 1.5rem 0;
+}
+
+#information-main p {
+    margin: 0;
+}
+
+#information-main span {
+    margin: 2rem 0;
+}
+
+#info-catalog {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    width: 40%;
+}
+
+.thumbnail-card-container {
+    padding: 1rem;
+}
+
+.thumbnail-card-container:hover {
+    background-color: var(--info-catalog-card-background-color);
+}
+
+.thumbnail-card {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.thumbnail-card img {
+    display: block;
+    width: 35%;
+    height: auto;
+}
+
+.thumbnail-card .card-info {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.thumbnail-card .card-info h3 {
+    margin: 0;
+}
+
+.thumbnail-card .card-info p {
+    margin: 0.5rem 0;
+}
+
+.thumbnail-card .card-info a {
+    text-decoration: none;
+}
+
+#orientation {
+    margin-bottom: 1px;
+    border-bottom: 1px solid var(--thumbnail-card-boarder-color);
+}
+
+#campus {
+    margin: 1px 0;
+    border-top: 1px solid var(--thumbnail-card-boarder-color);
+    border-bottom: 1px solid var(--thumbnail-card-boarder-color);
+}
+
+#guest-lecture {
+    margin-top: 1px;
+    border-top: 1px solid var(--thumbnail-card-boarder-color);
+}

@@ -15,7 +15,7 @@ html, body {
     --banner-button-color: #4C4D4F;
     --info-catalog-card-background-color: #D9D9DB;
     --thumbnail-card-boarder-color: #CFCFD2;
-    --courses-background-color: #F5F5F6;
+    --courses-background-color: #EBEBED;
     --header-color: #595A5C;
     --company-academy-color: #98989E;
     --company-colmar-color: #333435;
@@ -224,4 +224,44 @@ main {
 #guest-lecture {
     margin-top: 1px;
     border-top: 1px solid var(--thumbnail-card-boarder-color);
+}
+
+/* courses secton */
+#courses {
+    padding: 2rem 3.5rem;
+    background-color: var(--courses-background-color);
+}
+
+#courses h2 {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#course-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    width: calc((100% - 6rem)/3);
+    margin: 2rem 1rem 0 1rem;
+    background-color: white;
+}
+
+.course-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.course-card-body {
+    margin: 1rem 1rem;
+    text-align: left;
+}
+
+.course-card-title {
+    margin: 0 0 0.5rem 0;
+}
+
+.course-card-body p {
+    margin: 0.5rem 0;
 }

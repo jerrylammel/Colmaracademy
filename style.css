@@ -13,9 +13,13 @@ html, body {
 :root {
     --banner-background-color: #D9D9DB;
     --banner-button-color: #4C4D4F;
+    --information-background-color: #F2F2F3;
     --info-catalog-card-background-color: #D9D9DB;
     --thumbnail-card-boarder-color: #CFCFD2;
-    --courses-background-color: #EBEBED;
+    --courses-background-color: #E6E6E9;
+    --thesis-background-color: #F2F2F3;
+    --thesis-card-hover-background-color: #D9D9DB;
+    --thesis-video-border-color: #ABABAF;
     --header-color: #595A5C;
     --company-academy-color: #98989E;
     --company-colmar-color: #333435;
@@ -140,6 +144,7 @@ main {
     background-color: white;
     padding-left: 1.5rem;
     padding-bottom: 2rem;
+    background-color: var(--information-background-color);
 }
 
 #information-main {
@@ -226,7 +231,7 @@ main {
     border-top: 1px solid var(--thumbnail-card-boarder-color);
 }
 
-/* courses secton */
+/* Courses section */
 #courses {
     padding: 2rem 3.5rem;
     background-color: var(--courses-background-color);
@@ -263,5 +268,82 @@ main {
 }
 
 .course-card-body p {
+    margin: 0.5rem 0;
+}
+
+/* Thesis exhibit section */
+#thesis-exhibit {
+    padding: 2rem 0;
+    background-color: var(--thesis-background-color);
+}
+
+#thesis-exhibit h2 {
+    margin: 0 auto 2rem auto;
+    width: fit-content;
+}
+
+#thesis-container {
+    margin: 2rem 0;
+    display: flex;
+}
+
+#reimagine-urban {
+    margin: 0 1.5rem;
+    width: 60%;
+}
+
+#video-container video {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border: var(--thesis-video-border-color) solid 2px;
+}
+
+#reimagine-urban .thesis-title {
+    margin-top: 0;
+}
+
+.thesis-text {
+    margin: 0.5rem 0 0 0;
+}
+
+#thesis-examples {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0.5rem;
+    width: 40%;    
+}
+
+.thesis-card-container {
+    padding: 1rem;
+}
+
+.thesis-card-container:hover {
+    background-color: var(--thesis-card-hover-background-color);
+}
+
+.thesis-card {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.thesis-card img {
+    display: block;
+    width: 35%;
+    height: auto;
+}
+
+.thesis-card .thesis-card-info {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.thesis-card .thesis-card-info h3 {
+    margin: 0;
+}
+
+.thesis-card .thesis-card-info p {
     margin: 0.5rem 0;
 }

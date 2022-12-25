@@ -149,15 +149,13 @@ main {
     display: flex;
     background-color: white;
     padding-left: 1.5rem;
-    padding-bottom: 2rem;
     background-color: var(--information-background-color);
 }
 
 #information-main {
     display: flex;
     flex-direction: column;
-    padding-top: 2rem;
-    padding-right: 1.5rem;
+    padding: 2rem 1.5rem 0 0;
     width: 60%;
     height: auto;
     border-right: 2px solid var(--thumbnail-card-boarder-color);
@@ -179,6 +177,7 @@ main {
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
+    padding-bottom: 2rem;
     width: 40%;
 }
 

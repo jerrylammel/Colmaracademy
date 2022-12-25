@@ -12,6 +12,7 @@ html, body {
 /* variables */
 :root {
     --header-color: #595A5C;
+    --header-border-color: #4C4D4F;
     --company-academy-color: #98989E;
     --company-colmar-color: #333435;
     --font-color: #4C4D4F;    
@@ -37,41 +38,18 @@ header {
     height: 4rem;
     background-color: white;
     z-index: 100;
-    border: 2px solid transparent;
-  }
+    border-left: 2px solid var(--header-border-color);
+    border-right: 2px solid var(--header-border-color);
+}
 
 #header-desktop {
-    display: flex;
-    background-color: white;
-    justify-content: space-between;
-    align-items: center;
-    height: 4rem;
-    margin: auto 1.5rem;
-}
-
-#company {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-}
-
-#company .logo {
-    height: 2rem;
-    width: auto;
-}
-
-#header-mobile {
     display: none;
 }
 
-.company-name {
-    font-size: 1.2rem;
-    color: var(--company-academy-color);
-}
-
-.company-name strong {
-    color: var(--company-colmar-color);
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
 }
 
 nav ul li {
@@ -79,12 +57,56 @@ nav ul li {
     display: inline;
     font-size: 1rem;
     text-decoration: none;
-    margin-left: 1rem;
 }
 
 nav a {
     text-decoration: none;
     color: var(--header-color);
+}
+
+
+@media screen and (min-width: 576px) {
+    header {
+        border: 2px solid transparent;
+    }
+    
+    #header-desktop {
+        display: flex;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        margin: auto 1.5rem;
+    }
+
+    #header-mobile {
+        display: none;
+    }
+
+    #company {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2rem;
+    }
+    
+    #company .logo {
+        height: 2rem;
+        width: auto;
+    }
+    
+    .company-name {
+        font-size: 1.2rem;
+        color: var(--company-academy-color);
+    }
+    
+    .company-name strong {
+        color: var(--company-colmar-color);
+    }
+    
+    nav ul li {
+        margin-left: 1rem;
+    }
 }
 
 /* main */
@@ -101,33 +123,34 @@ main {
 #banner {
     position: relative;
     background-color: var(--banner-background-color);
-    padding: 2rem 0rem 2rem 1.5rem;
+    padding: 0;
 }
 
 #banner-content {
     display: flex;
+    flex-direction: column;
 }
 
 #banner-content img {
     display: block;
-    width: 60%;
     height: auto;
-    margin-right: 1.5rem;
+    width: 100%;
 }
 
 #banner-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     color: var(--font-color);
-    width: 30%;
-    padding: 10rem 0 10rem 1rem;
+    width: 100%;
+    padding: 2rem 1rem;
 }
 
 #banner-info h1 {
     font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 #banner-info p {
@@ -137,10 +160,40 @@ main {
 #start-here {
     color: white;
     background-color: var(--banner-button-color);
-    width: 80%;
+    width: calc(100% - 2rem);
     padding: 0.5rem 0;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 576px) {
+    #banner {
+        padding: 2rem 0rem 2rem 1.5rem;
+    }
+
+    #banner-content {
+        flex-direction: row;
+    }
+
+    #banner-content img {
+        width: 60%;
+        margin-right: 1.5rem;    
+    }
+
+    #banner-info {
+        justify-content: space-around;
+        width: 30%;
+        padding: 10rem 0 10rem 1rem;
+    }
+
+    #banner-info h1 {
+        margin: auto;
+    }
+
+    #start-here {
+        width: 80%;
+        margin-top: 2rem;
+    }
 }
 
 /* Information section*/

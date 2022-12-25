@@ -11,6 +11,11 @@ html, body {
 
 /* variables */
 :root {
+    --header-color: #595A5C;
+    --company-academy-color: #98989E;
+    --company-colmar-color: #333435;
+    --font-color: #4C4D4F;    
+    --main-border-color: #4C4D4F;
     --banner-background-color: #D9D9DB;
     --banner-button-color: #4C4D4F;
     --information-background-color: #F2F2F3;
@@ -19,11 +24,10 @@ html, body {
     --courses-background-color: #E6E6E9;
     --thesis-background-color: #F2F2F3;
     --thesis-card-hover-background-color: #D9D9DB;
-    --thesis-video-border-color: #ABABAF;
-    --header-color: #595A5C;
-    --company-academy-color: #98989E;
-    --company-colmar-color: #333435;
-    --font-color: #4C4D4F;
+    --thesis-video-border-color: #ABABAF;    
+    --footer-border-color: #4C4D4F;
+    --footer-border-top-color: #E6E6E9;
+    --footer-background-color: #F2F2F3;
 }
 
 /* Header */
@@ -33,6 +37,7 @@ header {
     height: 4rem;
     background-color: white;
     z-index: 100;
+    border: 2px solid transparent;
   }
 
 #header-desktop {
@@ -87,8 +92,9 @@ main {
     position: relative;
     top: 4rem;
     width: 100%;
-    border: 1px solid var(--banner-button-color);
+    border: 2px solid var(--main-border-color);
     border-top: none;
+    border-bottom: none;
 }
 
 /* banner */
@@ -154,7 +160,7 @@ main {
     padding-right: 1.5rem;
     width: 60%;
     height: auto;
-    border-right: 1px solid var(--thumbnail-card-boarder-color);
+    border-right: 2px solid var(--thumbnail-card-boarder-color);
 }
 
 #information-main h2 {
@@ -216,19 +222,19 @@ main {
 }
 
 #orientation {
-    margin-bottom: 1px;
-    border-bottom: 1px solid var(--thumbnail-card-boarder-color);
+    margin-bottom: 2px;
+    border-bottom: 2px solid var(--thumbnail-card-boarder-color);
 }
 
 #campus {
     margin: 1px 0;
-    border-top: 1px solid var(--thumbnail-card-boarder-color);
-    border-bottom: 1px solid var(--thumbnail-card-boarder-color);
+    border-top: 2px solid var(--thumbnail-card-boarder-color);
+    border-bottom: 2px solid var(--thumbnail-card-boarder-color);
 }
 
 #guest-lecture {
-    margin-top: 1px;
-    border-top: 1px solid var(--thumbnail-card-boarder-color);
+    margin-top: 2px;
+    border-top: 2px solid var(--thumbnail-card-boarder-color);
 }
 
 /* Courses section */
@@ -283,7 +289,7 @@ main {
 }
 
 #thesis-container {
-    margin: 2rem 0;
+    margin-top: 2rem;
     display: flex;
 }
 
@@ -295,7 +301,7 @@ main {
 #video-container video {
     margin-bottom: 1.5rem;
     width: 100%;
-    border: var(--thesis-video-border-color) solid 2px;
+    border: 2px solid var(--thesis-video-border-color);
 }
 
 #reimagine-urban .thesis-title {
@@ -346,4 +352,38 @@ main {
 
 .thesis-card .thesis-card-info p {
     margin: 0.5rem 0;
+}
+
+/* footer  */
+footer {
+    position: relative;
+    top: 4rem;;
+    border: 2px solid var(--footer-border-color);
+    border-top: none;
+    background-color: var(--footer-background-color);
+}
+
+#footer-container {
+    margin: 0 0.5rem 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var(--footer-border-top-color);
+}
+
+#copyright {
+    margin: 1rem 0.875rem;
+}
+
+#terms-privacy ul {
+    display: flex;
+    margin: 1rem 0.875rem;    
+}
+
+#terms-privacy ul li {
+    margin-left: 1rem;
+    list-style: none;
+}
+
+#terms-privacy ul li a {
+    text-decoration: none;
 }

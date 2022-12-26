@@ -201,64 +201,48 @@ main {
     position: relative;
     display: flex;
     background-color: white;
-    padding-left: 1.5rem;
     background-color: var(--information-background-color);
 }
 
 #information-main {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1.5rem 0 0;
-    width: 60%;
-    height: auto;
-    border-right: 2px solid var(--thumbnail-card-boarder-color);
-}
-
-#information-main h2 {
-    margin: 2rem 0 1.5rem 0;
-}
-
-#information-main p {
-    margin: 0;
-}
-
-#information-main span {
-    margin: 2rem 0;
+    display: none;
 }
 
 #info-catalog {
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    width: 40%;
-}
-
-.thumbnail-card-container {
-    padding: 1rem;
-}
-
-.thumbnail-card-container:hover {
-    background-color: var(--info-catalog-card-background-color);
+    padding: 0;
+    width: 100%;
 }
 
 .thumbnail-card {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+    padding: 1rem 1rem 2rem 1rem;
+    margin-bottom: 2rem;    
 }
 
-.thumbnail-card img {
+.thumbnail-card:hover {
+    background-color: var(--info-catalog-card-background-color);
+}
+
+.info-img-desktop {
+    display: none;
+}
+
+.info-img-mobile {
     display: block;
-    width: 35%;
+    width: 100%;
     height: auto;
 }
 
 .thumbnail-card .card-info {
     display: flex;
-    width: 65%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
 }
 
 .thumbnail-card .card-info h3 {
@@ -273,21 +257,79 @@ main {
     text-decoration: none;
 }
 
-#orientation {
-    margin-bottom: 2px;
-    border-bottom: 2px solid var(--thumbnail-card-boarder-color);
+@media screen and (min-width: 576px) {
+    #information {
+        padding-left: 1.5rem;
+    }    
+
+    #information-main {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1.5rem 0 0;
+        width: 60%;
+        height: auto;
+        border-right: 2px solid var(--thumbnail-card-boarder-color);
+    }
+
+    #information-main h2 {
+        margin: 2rem 0 1.5rem 0;
+    }
+    
+    #information-main p {
+        margin: 0;
+    }
+    
+    #information-main span {
+        margin: 2rem 0;
+    }
+
+    #info-catalog {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0rem 2rem 0rem;
+        width: 40%;
+    }
+
+    .thumbnail-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 1rem;
+        margin-bottom: 0;
+    }    
+
+    .info-img-desktop {
+        display: block;
+        width: 35%;
+        height: auto;
+    }
+
+    .info-img-mobile {
+        display: none;
+    }
+
+    .thumbnail-card .card-info {
+        width: 65%;
+        padding: 0 1rem;        
+    }
+
+    #orientation {
+        margin-bottom: 2px;
+        border-bottom: 2px solid var(--thumbnail-card-boarder-color);
+    }
+    
+    #campus {
+        margin: 1px 0;
+        border-top: 2px solid var(--thumbnail-card-boarder-color);
+        border-bottom: 2px solid var(--thumbnail-card-boarder-color);
+    }
+    
+    #guest-lecture {
+        margin-top: 2px;
+        border-top: 2px solid var(--thumbnail-card-boarder-color);
+    }    
 }
 
-#campus {
-    margin: 1px 0;
-    border-top: 2px solid var(--thumbnail-card-boarder-color);
-    border-bottom: 2px solid var(--thumbnail-card-boarder-color);
-}
-
-#guest-lecture {
-    margin-top: 2px;
-    border-top: 2px solid var(--thumbnail-card-boarder-color);
-}
 
 /* Courses section */
 #courses {

@@ -22,6 +22,7 @@ html, body {
     --banner-button-color-mobile: #97989B;
     --information-background-color: #F2F2F3;
     --info-catalog-card-background-color: #D9D9DB;
+    --info-link-color: #1F81E0;
     --thumbnail-card-boarder-color: #CFCFD2;
     --courses-border-color-mobile: #D9D9DB;
     --course-grid-background-color: #D9D9DB;
@@ -262,6 +263,7 @@ main {
 
 .thumbnail-card .card-info a {
     text-decoration: none;
+    color: var(--info-link-color);
 }
 
 @media screen and (min-width: 576px) {

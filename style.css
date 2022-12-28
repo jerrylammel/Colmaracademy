@@ -19,6 +19,7 @@ html, body {
     --main-border-color: #4C4D4F;
     --banner-background-color: #D9D9DB;
     --banner-button-color: #4C4D4F;
+    --banner-button-color-mobile: #97989B;
     --information-background-color: #F2F2F3;
     --info-catalog-card-background-color: #D9D9DB;
     --thumbnail-card-boarder-color: #CFCFD2;
@@ -165,7 +166,7 @@ main {
 
 #start-here {
     color: white;
-    background-color: var(--banner-button-color);
+    background-color: var(--banner-button-color-mobile);
     width: calc(100% - 2rem);
     padding: 0.5rem 0;
     text-align: center;
@@ -199,6 +200,7 @@ main {
     #start-here {
         width: 80%;
         margin-top: 2rem;
+        background-color: var(--banner-button-color);
     }
 }
 
